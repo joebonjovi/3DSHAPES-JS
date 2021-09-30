@@ -1,6 +1,10 @@
+var c = "";
+
+function initializeCanvas(name){
+c = document.getElementById(name);
+}
 
 function drawPrism(offx, offy, l, w, h, r){
-var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
 ctx.clearRect(0, 0, c.width, c.height);
