@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div style="width: 60px; float: right; margin-right: 750px; margin-top: 380px;">
+<button style="margin: 5px;" id="up" onclick="up()">UP</button><button style="margin: 5px;" id="down" onclick="down()">DOWN</button>
+<button style="margin: 5px;" id="turnr" onclick="turn_right()">></button>
+<button style="margin: 5px;" id="turnl" onclick="turn_left()"><</button>
+</div>
+<canvas id="myCanvas" width="500" height="500" style="border:3px solid black; border-radius: 3px;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script src="prism.js"></script>
+
+<script>
+var ypos = 100;
+var turn = 1;
+
+function up(){
+  ypos-=10;
+  drawPrism(100, ypos, 50, 50, 100, turn);
+  console.log(ypos);
+}
+
+function down(){
+  ypos+=10;
+drawPrism(100, ypos, 50, 50, 100, turn);
+  console.log(ypos);
+}
+
+function turn_right(){
+turn++;
+drawPrism(100, ypos, 50, 50, 100, turn);
+}
+
+function turn_left(){
+turn--;
+drawPrism(100, ypos, 50, 50, 100, turn);
+}
+
+
+</script> 
+
+</body>
+</html>
